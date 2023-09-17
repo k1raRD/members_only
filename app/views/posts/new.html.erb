@@ -1,0 +1,14 @@
+<h1>Crear un post</h1>
+<%= form_with model: @post do |f| %>
+  <div>
+    <%= f.label :title, "title: "%>
+    <%= f.text_field :title%>
+  </div>
+
+  <div>
+    <%= f.label :content, "Content: "%>
+    <%= f.text_field :content%>
+  </div>
+
+  <%= f.submit "Crear post", disable_with: 'Submiting...'%>
+<% end %>
